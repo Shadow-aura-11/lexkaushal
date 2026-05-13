@@ -50,7 +50,7 @@ const About = () => {
           >
             <div className="relative z-10 rounded-2xl shadow-2xl overflow-hidden h-full min-h-[600px] border-8 border-white">
               <img 
-                src="/images/image-1.jpeg" 
+                src="/images/image-1.jpg" 
                 alt="Advocate Kaushal Profile" 
                 className="w-full h-full object-cover"
                 onError={(e) => {
