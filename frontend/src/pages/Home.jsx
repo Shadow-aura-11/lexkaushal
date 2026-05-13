@@ -164,7 +164,7 @@ const Home = () => {
             >
               <div className="relative z-10 rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.2)] h-full min-h-[500px]">
                 <img
-                  src="/images/image-1.jpg"
+                  src="/images/image-1.jpeg"
                   alt="Advocate Kaushal Pal"
                   className="w-full h-full object-cover scale-105 hover:scale-100 transition-transform duration-700"
                   onError={(e) => { e.target.src = "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1000&auto=format&fit=crop" }}
