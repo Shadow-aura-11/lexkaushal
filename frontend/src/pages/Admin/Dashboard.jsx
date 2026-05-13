@@ -31,6 +31,7 @@ const Dashboard = () => {
 
     const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5001';
     try {
+      console.log(`Fetching appointments from: ${apiUrl}/api/admin/appointments`);
       const res = await axios.get(`${apiUrl}/api/admin/appointments`, {
         headers: { Authorization: `Bearer ${token}` }
       });
@@ -38,6 +39,7 @@ const Dashboard = () => {
       setFilteredAppointments(res.data);
       setLoading(false);
     } catch (err) {
+      console.error('Dashboard fetch error:', err);
       if (err.response?.status === 401) {
         localStorage.removeItem('adminToken');
         navigate('/admin/login');

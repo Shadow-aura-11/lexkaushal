@@ -13,11 +13,14 @@ const Login = () => {
     e.preventDefault();
     try {
       const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5001';
+      console.log(`Attempting login at: ${apiUrl}/api/admin/login`);
       const res = await axios.post(`${apiUrl}/api/admin/login`, { email, password });
       localStorage.setItem('adminToken', res.data.token);
       navigate('/admin/dashboard');
     } catch (err) {
-      setError(err.response?.data?.message || 'Login failed');
+      console.error('Login error details:', err);
+      const errorMessage = err.response?.data?.message || err.response?.data?.error || err.message || 'Login failed';
+      setError(errorMessage);
     }
   };
 
