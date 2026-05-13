@@ -167,7 +167,7 @@ const Home = () => {
                   src="/images/image-1.jpeg"
                   alt="Advocate Kaushal Pal"
                   className="w-full h-full object-cover scale-105 hover:scale-100 transition-transform duration-700"
-                  onError={(e) => { e.target.src = "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1000&auto=format&fit=crop" }}
+                  onError={(e) => { e.target.src = "https://media.licdn.com/dms/image/v2/D5622AQEfbRCNMil3oQ/feedshare-shrink_480/B56Z0V0dUrJYAk-/0/1774187566626?e=1780531200&v=beta&t=e-nWped6voOLxuKXBu1z8vnEJIOkUooCMtnEYU9mcHg&auto=format&fit=crop" }}
                 />
               </div>
               <div className="absolute -bottom-10 -right-10 w-full h-full bg-gold-500/5 rounded-2xl -z-10 border border-gold-500/10"></div>
