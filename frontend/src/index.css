@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --font-inter: 'Inter', sans-serif;
+  --font-playfair: 'Playfair Display', serif;
+  --font-poppins: 'Poppins', sans-serif;
+
+  --color-navy-900: #0a192f;
+  --color-navy-800: #112240;
+  --color-navy-700: #233554;
+  --color-gold-500: #d4af37;
+  --color-gold-600: #b5952f;
+  --color-gold-400: #e5c158;
+  --color-gray-50: #f9fafb;
+  --color-gray-100: #f3f4f6;
+  --color-gray-200: #e5e7eb;
+}
+
+@layer base {
+  body {
+    @apply font-inter bg-gray-50 text-gray-900 antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair text-navy-900;
+  }
+
+  .heading-primary {
+    @apply font-playfair text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-navy-900 leading-tight;
+  }
+
+  .heading-secondary {
+    @apply font-playfair text-3xl md:text-4xl font-bold text-navy-900 mb-6;
+  }
+
+  .text-gold {
+    @apply text-gold-500;
+  }
+}
+
+@layer utilities {
+  .bg-hero-pattern {
+    background-image: linear-gradient(rgba(10, 25, 47, 0.8), rgba(10, 25, 47, 0.9)), url('https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=2000&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+  .glass-card {
+    @apply bg-white/90 backdrop-blur-md border border-white/20 shadow-xl;
+  }
+
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+
+  .hover-tilt {
+    @apply transition-transform duration-500;
+  }
+  
+  .hover-tilt:hover {
+    transform: rotateX(5deg) rotateY(5deg);
+  }
+  
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-8 py-3.5 text-base font-medium text-navy-900 bg-gold-500 hover:bg-gold-400 transition-all duration-300 rounded-sm shadow-lg hover:shadow-gold-500/30 font-poppins;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center px-8 py-3.5 text-base font-medium text-gold-500 border border-gold-500 hover:bg-gold-500 hover:text-navy-900 transition-all duration-300 rounded-sm font-poppins;
+  }
+}
