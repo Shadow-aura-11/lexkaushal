@@ -54,7 +54,7 @@ const About = () => {
                 alt="Advocate Kaushal Profile" 
                 className="w-full h-full object-cover"
                 onError={(e) => {
-                  e.target.src = "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1000&auto=format&fit=crop";
+                  e.target.src = "https://media.licdn.com/dms/image/v2/D5622AQEfbRCNMil3oQ/feedshare-shrink_480/B56Z0V0dUrJYAk-/0/1774187566626?e=1780531200&v=beta&t=e-nWped6voOLxuKXBu1z8vnEJIOkUooCMtnEYU9mcHg";
                 }}
               />
             </div>
