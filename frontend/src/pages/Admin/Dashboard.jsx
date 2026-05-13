@@ -29,8 +29,9 @@ const Dashboard = () => {
       return;
     }
 
+    const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5001';
     try {
-      const res = await axios.get('http://localhost:5001/api/admin/appointments', {
+      const res = await axios.get(`${apiUrl}/api/admin/appointments`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setAppointments(res.data);
@@ -76,8 +77,9 @@ const Dashboard = () => {
   const updateStatus = async (id, newStatus) => {
     setUpdateLoading(true);
     const token = localStorage.getItem('adminToken');
+    const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5001';
     try {
-      await axios.patch(`http://localhost:5001/api/admin/appointments/${id}`, 
+      await axios.patch(`${apiUrl}/api/admin/appointments/${id}`, 
         { status: newStatus },
         { headers: { Authorization: `Bearer ${token}` } }
       );

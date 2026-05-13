@@ -28,7 +28,8 @@ const Contact = () => {
         date: data.date ? format(data.date, 'dd/MM/yyyy') : null
       };
       
-      await axios.post('http://localhost:5001/api/public/book-appointment', formattedData);
+      const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5001';
+      await axios.post(`${apiUrl}/api/public/book-appointment`, formattedData);
       
       setSubmitStatus('success');
       reset();
